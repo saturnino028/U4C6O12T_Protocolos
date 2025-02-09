@@ -6,7 +6,7 @@
 
 
 volatile uint32_t passado = 0; //Usada para implementar o debouncing
-bool status_led_G = 1, status_led_B = 1;
+bool status_led_G = 0, status_led_B = 0;
 uint8_t botoes_flag = 0;
 
 /**

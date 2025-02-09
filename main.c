@@ -21,6 +21,7 @@ int main()
 
   desenhar_fig(vetor_fig, brilho_matriz);
 
+  gpio_put(LED_R, 1);
   gpio_put(LED_G, status_led_G);
   gpio_put(LED_B, status_led_B);
 
@@ -51,13 +52,14 @@ int main()
 
     if(c != '\0' && c > 0)
     {
+      uint8_t x = 8, y = 32;
       // Atualiza o conteúdo do display com caracater
       switch (c)
       {
         case '0':
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-          ssd1306_draw_char(&ssd, c, 110,40); 
+          ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+          ssd1306_draw_char(&ssd, c, x+102,y); 
           ssd1306_send_data(&ssd); // Atualiza o display
           printf("Voce Digitou: %c\n", c);
 
@@ -66,8 +68,8 @@ int main()
           break;
         case '1':
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-          ssd1306_draw_char(&ssd, c, 110,40); 
+          ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+          ssd1306_draw_char(&ssd, c, x+102,y); 
           ssd1306_send_data(&ssd); // Atualiza o display
           printf("Voce Digitou: %c\n", c);
 
@@ -76,8 +78,8 @@ int main()
         break;
         case '2':
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-          ssd1306_draw_char(&ssd, c, 110,40); 
+          ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+          ssd1306_draw_char(&ssd, c, x+102,y); 
           ssd1306_send_data(&ssd); // Atualiza o display
           printf("Voce Digitou: %c\n", c);
 
@@ -86,8 +88,8 @@ int main()
         break;
         case '3':
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-          ssd1306_draw_char(&ssd, c, 110,40); 
+          ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+          ssd1306_draw_char(&ssd, c, x+102,y); 
           ssd1306_send_data(&ssd); // Atualiza o display
           printf("Voce Digitou: %c\n", c);
 
@@ -96,8 +98,8 @@ int main()
         break;
         case '4':
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-          ssd1306_draw_char(&ssd, c, 110,40); 
+          ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+          ssd1306_draw_char(&ssd, c, x+102,y); 
           ssd1306_send_data(&ssd); // Atualiza o display
           printf("Voce Digitou: %c\n", c);
 
@@ -106,8 +108,8 @@ int main()
         break;
         case '5':
         ssd1306_fill(&ssd, !cor); // Limpa o display
-        ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-        ssd1306_draw_char(&ssd, c, 110,40); 
+        ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+        ssd1306_draw_char(&ssd, c, x+102,y); 
         ssd1306_send_data(&ssd); // Atualiza o display
         printf("Voce Digitou: %c\n", c);
 
@@ -116,8 +118,8 @@ int main()
         break;
         case '6':
         ssd1306_fill(&ssd, !cor); // Limpa o display
-        ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-        ssd1306_draw_char(&ssd, c, 110,40); 
+        ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+        ssd1306_draw_char(&ssd, c, x+102,y); 
         ssd1306_send_data(&ssd); // Atualiza o display
         printf("Voce Digitou: %c\n", c);
 
@@ -126,8 +128,8 @@ int main()
         break;
         case '7':
         ssd1306_fill(&ssd, !cor); // Limpa o display
-        ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-        ssd1306_draw_char(&ssd, c, 110,40); 
+        ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+        ssd1306_draw_char(&ssd, c, x+102,y); 
         ssd1306_send_data(&ssd); // Atualiza o display
         printf("Voce Digitou: %c\n", c);
 
@@ -136,8 +138,8 @@ int main()
         break;
         case '8':
         ssd1306_fill(&ssd, !cor); // Limpa o display
-        ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-        ssd1306_draw_char(&ssd, c, 110,40); 
+        ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+        ssd1306_draw_char(&ssd, c, x+102,y); 
         ssd1306_send_data(&ssd); // Atualiza o display
         printf("Voce Digitou: %c\n", c);
 
@@ -146,8 +148,8 @@ int main()
         break;
         case '9':
         ssd1306_fill(&ssd, !cor); // Limpa o display
-        ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-        ssd1306_draw_char(&ssd, c, 110,40); 
+        ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+        ssd1306_draw_char(&ssd, c, x+102,y); 
         ssd1306_send_data(&ssd); // Atualiza o display
         printf("Voce Digitou: %c\n", c);
 
@@ -155,12 +157,18 @@ int main()
         desenhar_fig(vetor_fig, brilho_matriz);
         break;
         case '+': //Aumenta o brilho da matriz de LEDS
-          brilho_matriz = brilho_matriz +2;
+          if(brilho_matriz <100)
+            brilho_matriz = brilho_matriz +5;
+          else
+            brilho_matriz = 100;
           desenhar_fig(vetor_fig, brilho_matriz);
           printf("Brilho em: %d", brilho_matriz);
         break;
         case '-': //Reduz o brilho da matriz de LEDS
-          brilho_matriz = brilho_matriz -2;
+          if(brilho_matriz > 0 )
+            brilho_matriz = brilho_matriz -5;
+          else
+            brilho_matriz = 0;
           desenhar_fig(vetor_fig, brilho_matriz);
           printf("Brilho em: %d", brilho_matriz);
         break;
@@ -174,8 +182,8 @@ int main()
 
         default:
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "Voce digitou", 8, 40); // Desenha uma string
-          ssd1306_draw_char(&ssd, c, 110,32); 
+          ssd1306_draw_string(&ssd, "Voce digitou", x, y); // Desenha uma string
+          ssd1306_draw_char(&ssd, c, x+102,y); 
           ssd1306_send_data(&ssd); // Atualiza o display
           printf("Voce Digitou: %c\n", c);
 
@@ -187,6 +195,7 @@ int main()
     
     if(botoes_flag != 0)
     {
+      gpio_put(LED_R, 0);
       if(botoes_flag == 1) //Tecla A
       {
         if(status_led_G)
@@ -223,6 +232,8 @@ int main()
 
         }
       }
+      if(!status_led_G && !status_led_B) //Se os LEDs verde e azul e estiverem apagados liga o vermelho
+        gpio_put(LED_R, 1);
       botoes_flag = 0;
     }
     sleep_ms(100);
