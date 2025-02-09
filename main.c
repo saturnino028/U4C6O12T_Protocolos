@@ -1,5 +1,7 @@
 #include "main.h"
 
+uint8_t x = 8, y = 32;
+
 int main()
 {
   ssd1306_t ssd; // Inicializa a estrutura do display
@@ -52,7 +54,6 @@ int main()
 
     if(c != '\0' && c > 0)
     {
-      uint8_t x = 8, y = 32;
       // Atualiza o conteúdo do display com caracater
       switch (c)
       {
@@ -202,14 +203,14 @@ int main()
         {
           printf("LED Verde On");
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "LED verde On", 8, 40); // Desenha uma string
+          ssd1306_draw_string(&ssd, "LED verde On", x, y); // Desenha uma string
           ssd1306_send_data(&ssd); // Atualiza o display
         }
         else if(!status_led_G)
         {
           printf("LED Verde Off");
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "LED verde Off", 8, 40); // Desenha uma string
+          ssd1306_draw_string(&ssd, "LED verde Off", x, y); // Desenha uma string
           ssd1306_send_data(&ssd); // Atualiza o display
 
         }
@@ -220,14 +221,14 @@ int main()
         {
           printf("LED Azul On");
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "LED Azul On", 8, 40); // Desenha uma string
+          ssd1306_draw_string(&ssd, "LED Azul On", x, y); // Desenha uma string
           ssd1306_send_data(&ssd); // Atualiza o display
         }
         else if(!status_led_B)
         {
           printf("LED Azul Off");
           ssd1306_fill(&ssd, !cor); // Limpa o display
-          ssd1306_draw_string(&ssd, "LED Azul Off", 8, 40); // Desenha uma string
+          ssd1306_draw_string(&ssd, "LED Azul Off", x, y); // Desenha uma string
           ssd1306_send_data(&ssd); // Atualiza o display
 
         }
