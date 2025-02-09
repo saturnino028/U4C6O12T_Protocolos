@@ -41,4 +41,4 @@ Para utilizar o programa com o simulador Wokwi, o usuário deve:
 4. Usando um cabo USB, gravar o código no Pico W.
 
 ---
-Desenvolvido para a capacitação em Sistemas Embarcados oferecida pela CEPEDI utilizando o Raspberry Pi Pico W, o simulador Wokwi, o Pico SDK e p kit BitDogLab.
+Desenvolvido para a capacitação em Sistemas Embarcados oferecida pela CEPEDI utilizando o Raspberry Pi Pico W, o Pico SDK e o kit de desenvolvimento BitDogLab.
